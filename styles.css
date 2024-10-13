@@ -8,6 +8,9 @@ body {
 main {
     margin-top: 50px;
     padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 20px;
 }
 
 .text {
@@ -31,7 +34,9 @@ main {
     height: 215px;
     perspective: 1000px;
 }
-
+.bold {
+    font-weight: bold;
+}
 .card-inner {
     position: relative;
     width: 100%;
