@@ -1,9 +1,11 @@
-        document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const profileCard = document.querySelector('.profile-card');
     const contactBtn = document.querySelector('.contact-btn');
     const flipBackBtn = document.querySelector('.flip-back-btn');
     const copyBtn = document.querySelector('.copy-btn');
     const trackingInput = document.getElementById('tracking');
+    const shipper = document.getElementById('shipper');
+    const websiteLink = document.querySelector('.website-link');
 
     function flipCard() {
         profileCard.classList.toggle('flipped');
@@ -13,8 +15,8 @@
     flipBackBtn.addEventListener('click', flipCard);
 
     copyBtn.addEventListener('click', () => {
-        const companyName = "Company Name";
-        const websiteLink = "www.companywebsite.com";
+        const companyName = shipper.textContent;
+        const website = websiteLink.textContent;
 
         const textToCopy = `Shipping Company: ${companyName}
 Tracking: ${trackingInput.value}
