@@ -1,13 +1,19 @@
 body {
     font-family: "Roboto", sans-serif;
-    display: flex;
-    justify-content: center;
-    /* align-items: center; */
     min-height: 100vh;
     margin: 0;
     background-color: #494D5F;
 }
 
+main {
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.text {
+    text-align: center;
+    color: white;
+}
 .menubar {
     font-size: 24px;
     font-weight: bold;
@@ -33,7 +39,12 @@ body {
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
-.card-front {
+
+.profile-card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -45,6 +56,12 @@ body {
     overflow: hidden;
 }
 
+.card-back {
+    transform: rotateY(180deg);
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .left-side {
     width: 33.33%;
     background-color: #3b82f6;
@@ -52,13 +69,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .image-container {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -68,7 +82,7 @@ body {
     object-fit: cover;
 }
 
-.contact-btn {
+.contact-btn, .flip-back-btn {
     background-color: white;
     color: #3b82f6;
     padding: 8px 16px;
@@ -78,6 +92,10 @@ body {
     text-align: center;
     border: none;
     font-size: 14px;
+}
+
+.contact-btn:hover, .flip-back-btn:hover {
+    background-color: #e6e6e6;
 }
 
 .right-side {
@@ -134,4 +152,27 @@ input[type="text"] {
 
 .clipboard-icon, .arrow-left-icon {
     margin-right: 8px;
+}
+
+.contact-info p {
+    margin-bottom: 8px;
+}
+
+.contact-info {
+    text-align: center;
+}
+
+.flip-back-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #3b82f6;
+    color: white;
+    width: 50%;
+    margin: 0px auto;
+    margin-bottom: 20px;
+}
+
+.flip-back-btn:hover {
+    background-color: #2563eb;
 }
