@@ -38,3 +38,17 @@
           });
         });
       });
+
+      // searchbox
+      const searchBox = document.getElementById('searchBox');
+
+      searchBox.addEventListener('input', () => {
+        const searchTerm = searchBox.value.toLowerCase();
+        const cards = document.querySelectorAll('.tracking-card');
+    
+        cards.forEach(card => {
+          const shipperName = card.querySelector('h2').textContent.toLowerCase();
+          card.style.display = shipperName.includes(searchTerm) ? 'block' : 'none';
+          card.classList.toggle('fade-in', shipperName.includes(searchTerm));
+        });
+      }); 

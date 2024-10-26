@@ -6,7 +6,6 @@ body {
 }
 
 main {
-    margin-top: 50px;
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -182,4 +181,57 @@ input[type="text"] {
 
 .flip-back-btn:hover {
     background-color: #2563eb;
+}
+
+/* Searchbox */
+.search-container {
+    padding: 20px;
+    width: 100%;
+    background-color: #494D5F;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Animation styles */
+.search-container {
+    padding: 20px;
+    width: 80%;
+    background-color: #494D5F;
+    margin: 0px auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #3b82f6;
+    border-radius: 8px;
+    outline: none;
+}
+
+.tracking-card {
+    transition: all 1s ease;
+    opacity: 1;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
