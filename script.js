@@ -1,5 +1,5 @@
       document.addEventListener("DOMContentLoaded", () => {
-        const trackingCards = document.querySelectorAll(".tracking-card"); // Changed from single card to all cards
+        const trackingCards = document.querySelectorAll(".tracking-card",".tracking-card-extra");
 
         trackingCards.forEach((trackingCard) => {
           const contactBtn = trackingCard.querySelector(".contact-btn");
@@ -21,7 +21,11 @@
             const trackingNumber = trackingInput.value;
             const website = websiteLink.href;
 
-            const textToCopy = `Shipping Company: ${companyName}\nTracking: ${trackingNumber}\nWebsite: ${website}`;
+            const isExtraCard = trackingCard.classList.contains("tracking-card-extra");
+            const modifiedWebsite = isExtraCard ? `${website}${trackingNumber}` : website;
+
+
+            const textToCopy = `Shipping Company: ${companyName}\nTracking: ${trackingNumber}\nWebsite: ${modifiedWebsite}`;
 
             navigator.clipboard.writeText(textToCopy).then(() => {
               copyBtn.textContent = "Copied";
