@@ -218,6 +218,20 @@ input[type="text"] {
     outline: none;
 }
 
+/* Footer */
+.footer {
+    background-color: #ccc;
+    margin: 0px;
+    padding: 20px;
+    text-align: center;
+}
+.footer h4 {
+    font-style: italic;
+}
+.footer a {
+    text-decoration: none;
+    color: rgb(235, 94, 94);
+}
 /* Animation styles */
 .search-container {
     padding: 20px;
