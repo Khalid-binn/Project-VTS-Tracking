@@ -13,6 +13,25 @@ main {
     justify-content: center;
 }
 
+.manual {
+    text-align: center;
+    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+.manual a {
+    text-decoration: none;
+    color: white;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.manual a:hover {
+    background-color: black;
+    border: 1.5px solid white;
+}
 .text {
     text-align: center;
     color: white;
