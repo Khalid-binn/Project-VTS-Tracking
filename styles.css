@@ -154,7 +154,7 @@ input[type="text"] {
     text-decoration: underline;
 }
 
-.copy-btn {
+.copy-btn,.track-btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,6 +231,11 @@ input[type="text"] {
 .footer a {
     text-decoration: none;
     color: rgb(235, 94, 94);
+}
+
+.functions {
+    display: flex;
+    gap: 20px;
 }
 /* Animation styles */
 .search-container {

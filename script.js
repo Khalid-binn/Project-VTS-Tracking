@@ -8,6 +8,7 @@
           const trackingInput = trackingCard.querySelector("#tracking");
           const shipper = trackingCard.querySelector("#shipper");
           const websiteLink = trackingCard.querySelector(".website-link");
+          const trackBtn = trackingCard.querySelector(".track-btn");
 
           function flipCard() {
             trackingCard.classList.toggle("flipped");
@@ -40,9 +41,15 @@
               }, 2000);
             });
           });
-        });
-      });
-
+          if (trackBtn) {
+            trackBtn.addEventListener("click", () => {
+                const trackingNumber = trackingInput.value;
+                const fullWebsiteLink = `${websiteLink.href}${trackingNumber}`; // Construct the full URL
+                window.open(fullWebsiteLink, '_blank'); // Open in a new tab
+            });
+        }
+    });
+});
       // searchbox
       const searchBox = document.getElementById('searchBox');
 
