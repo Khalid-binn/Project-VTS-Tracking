@@ -1,5 +1,5 @@
       document.addEventListener("DOMContentLoaded", () => {
-        const trackingCards = document.querySelectorAll(".tracking-card",".tracking-card-extra");
+        const trackingCards = document.querySelectorAll(".tracking-card, .tracking-card-extra");
 
         trackingCards.forEach((trackingCard) => {
           const contactBtn = trackingCard.querySelector(".contact-btn");
