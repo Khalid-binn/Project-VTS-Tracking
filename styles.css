@@ -127,6 +127,7 @@ main {
     padding: 16px;
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
 }
 
 h2 {
@@ -136,6 +137,7 @@ h2 {
     overflow: auto;
 }
 
+
 input[type="text"] {
     padding: 8px 12px;
     border: 1px solid #ccc;
@@ -144,16 +146,9 @@ input[type="text"] {
 }
 
 .website-link {
-    color: #3b82f6;
-    text-decoration: none;
-    margin-bottom: 16px;
-    display: inline-block;
-    text-align: center; 
+    display: none;   
 }
 
-.website-link:hover {
-    text-decoration: underline;
-}
 
 .copy-btn,.track-btn {
     display: flex;
